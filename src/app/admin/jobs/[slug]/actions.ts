@@ -37,7 +37,10 @@ export async function approveSubmission(
   }
 }
 
-export async function deleteJob(prevState: FormState, formData: FormData) {
+export async function deleteJob(
+  prevState: FormState,
+  formData: FormData,
+): Promise<FormState> {
   try {
     const jobId = parseInt(formData.get("jobId") as string);
 
